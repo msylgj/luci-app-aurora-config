@@ -6,20 +6,20 @@
       "ubus": {
         "luci.aurora": [
           "list_icons",
-          "get_installed_versions",
-          "check_updates",
-          "get_system_info",
           "get_theme_config",
           "get_theme_presets",
-          "export_config"
+          "export_config",
+          "remove_background",
+          "rename_background"
         ],
+        "system": ["info"],
         "file": ["read", "list", "stat"]
       },
       "file": {
         "/tmp/aurora_icon.tmp": ["read", "write"],
         "/tmp/aurora_config_export.conf": ["read"],
-        "/tmp/aurora_downloads/*": ["read", "list"],
-        "/www/luci-static/aurora/images/*": ["read", "list"]
+        "/www/luci-static/aurora/images/*": ["read", "list"],
+        "/www/luci-static/aurora/background/*": ["list"]
       }
     },
     "write": {
@@ -28,18 +28,18 @@
         "luci.aurora": [
           "upload_icon",
           "remove_icon",
-          "download_package",
-          "install_package",
           "reset_defaults",
           "import_config",
-          "apply_theme_preset"
+          "apply_theme_preset",
+          "remove_background",
+          "rename_background"
         ],
         "file": ["write", "remove", "exec", "stat"]
       },
       "file": {
         "/tmp/aurora_icon.tmp": ["read", "write"],
         "/tmp/aurora_config_import.tmp": ["read", "write", "remove"],
-        "/tmp/aurora_downloads/*": ["read", "write", "remove"],
+        "/tmp/aurora_background.tmp": ["write"],
         "/www/luci-static/aurora/images/*": ["read", "write", "remove"]
       }
     }

@@ -17,12 +17,15 @@
       "path": "aurora/theme"
     }
   },
-  "admin/system/aurora/version": {
-    "title": "Version Management",
+  "admin/system/aurora/background": {
+    "title": "Background Settings",
     "order": 20,
     "action": {
       "type": "view",
-      "path": "aurora/version"
+      "path": "aurora/background"
+    },
+    "depends": {
+      "uci": { "aurora": true }
     }
   }
 }

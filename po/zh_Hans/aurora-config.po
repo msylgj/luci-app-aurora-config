@@ -13,6 +13,11 @@ msgstr "强调色"
 msgid "Accent Foreground"
 msgstr "强调色前景"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:135
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:373
+msgid "Action"
+msgstr "操作"
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:373
 msgid "Actions"
 msgstr "操作"
@@ -20,6 +25,10 @@ msgstr "操作"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:563
 msgid "Amber Sand"
 msgstr "琥珀流沙"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:83
+msgid "API key"
+msgstr "API 密钥"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:671
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:677
@@ -56,11 +65,9 @@ msgstr ""
 "您确定要将所有主题设置（颜色、结构、图标和工具栏）重置回默认主题的原始配置"
 "吗？这将把所有内容恢复为默认主题的初始状态。"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:80
-msgid ""
-"Are you sure you want to update <strong>%h</strong> to version <strong>%h</"
-"strong>?"
-msgstr "您确定要将 <strong>%h</strong> 更新到版本 <strong>%h</strong> 吗？"
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:42
+msgid "Aurora theme configuration"
+msgstr "Aurora 主题设置"
 
 #: applications/luci-app-aurora-config/root/usr/share/luci/menu.d/luci-app-aurora.json:3
 msgid "Aurora Settings"
@@ -74,9 +81,21 @@ msgstr "Aurora 主题设置"
 msgid "Background"
 msgstr "背景色"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:155
+msgid "Background file list"
+msgstr "背景文件列表"
+
+#: applications/luci-app-aurora-config/root/usr/share/luci/menu.d/luci-app-aurora.json:21
+msgid "Background Settings"
+msgstr "背景设置"
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:515
 msgid "Base Colors"
 msgstr "基础颜色"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:51
+msgid "Bing"
+msgstr "Bing"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:474
 msgid "Border"
@@ -85,6 +104,10 @@ msgstr "边框"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1018
 msgid "Boxed Dropdown"
 msgstr "盒式下拉菜单"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:50
+msgid "Built-in"
+msgstr "内建"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1166
 msgid "Button Title"
@@ -98,36 +121,12 @@ msgstr "按钮标题不能为空"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:634
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:782
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:860
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:90
 msgid "Cancel"
 msgstr "取消"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:425
-msgid "Check for Updates"
-msgstr "检查更新"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:391
-msgid ""
-"Check for and install updates for Aurora theme and configuration packages. "
-"Updates are downloaded from the latest releases of the Aurora theme and "
-"configuration plugin GitHub repositories."
-msgstr ""
-"检查并安装 Aurora 主题和配置软件包的更新。更新将从 Aurora 主题和配置插件的 "
-"GitHub 仓库最新发布版本中下载。"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:756
 msgid "Checking file…"
 msgstr "正在检查文件..."
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:255
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:281
-msgid "Checking for updates..."
-msgstr "正在检查更新..."
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:269
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:306
-msgid "Checking..."
-msgstr "检查中..."
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:560
 msgid "Classic"
@@ -141,21 +140,21 @@ msgstr "点击此处上传"
 msgid "Click to select color visually"
 msgstr "点击以可视化选择颜色"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:204
-msgid "Close"
-msgstr "关闭"
-
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:979
 msgid "Color"
 msgstr "颜色"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:70
+msgid "Collection ID"
+msgstr "分类 ID"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:70
+msgid "Collection ID for Unsplash or Wallhaven."
+msgstr "为 Unsplash 或 Wallhaven 指定分类 ID"
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:523
 msgid "Component Colors"
 msgstr "组件颜色"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:959
-msgid "Config:"
-msgstr "配置："
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:724
 msgid "Configuration exported successfully."
@@ -215,6 +214,7 @@ msgstr "默认"
 msgid "Default Foreground"
 msgstr "默认前景"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:150
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:424
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:430
 msgid "Delete"
@@ -243,10 +243,6 @@ msgstr "警示"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:495
 msgid "Destructive Foreground"
 msgstr "警示前景"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:109
-msgid "Downloading update files..."
-msgstr "正在下载更新文件..."
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1025
 msgid "Element Spacing"
@@ -292,17 +288,29 @@ msgstr "导出失败"
 msgid "Export failed: %s"
 msgstr "导出失败：%s"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:361
-msgid "Failed to check for updates: %s. Please check your internet connection."
-msgstr "检查更新失败：%s。请检查您的网络连接。"
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:87
+msgid "Extra parameters"
+msgstr "附加参数"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:415
 msgid "Failed to delete icon: %s"
 msgstr "删除图标失败：%s"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:119
+msgid "Failed to upload file: %s."
+msgstr "上传文件失败：%s。"
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:329
 msgid "Failed to upload icon: %s"
 msgstr "上传图标失败：%s"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:132
+msgid "Filename"
+msgstr "文件名"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:109
+msgid "Files will be uploaded to <code>%s</code>."
+msgstr "文件将被上传至<code>%s</code>。"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1129
 msgid "Floating Toolbar"
@@ -311,6 +319,10 @@ msgstr "悬浮工具栏"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:469
 msgid "Foreground"
 msgstr "前景色"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:52
+msgid "GHSer"
+msgstr "GHSer"
 
 #: applications/luci-app-aurora-config/root/usr/share/rpcd/acl.d/luci-app-aurora.json:3
 msgid "Grant access to Aurora theme configuration"
@@ -323,6 +335,13 @@ msgstr "顶栏背景"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:479
 msgid "Header Interactive"
 msgstr "顶栏交互"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:43
+msgid ""
+"Here you can set the background pictures and videos of the login page of "
+"Aurora theme, Chrome is recommended."
+msgstr ""
+"在这里你可以设置 Aurora 主题的登录页面的背景图片与视频，推荐使用 Chrome。"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1178
 msgid "Icon"
@@ -377,25 +396,9 @@ msgstr "信息前景"
 msgid "Input Checked"
 msgstr "输入框选中"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:153
-msgid "Installation Details"
-msgstr "安装详情"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:432
-msgid "Installed Version"
-msgstr "已安装版本"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:120
-msgid "Installing update packages..."
-msgstr "正在安装更新包..."
-
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:488
 msgid "Label Surface"
 msgstr "标签表面"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:433
-msgid "Latest Version"
-msgstr "最新版本"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1005
 msgid "Layout"
@@ -416,6 +419,10 @@ msgstr "Logo 设置"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1017
 msgid "Mega Menu"
 msgstr "巨型菜单"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:133
+msgid "Modified date"
+msgstr "修改时间"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:561
 msgid "Monochrome"
@@ -438,17 +445,13 @@ msgstr "导航子菜单类型"
 msgid "No file selected or upload failed"
 msgstr "未选择文件或上传失败"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:152
+msgid "No files found."
+msgstr "没有找到文件。"
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:363
 msgid "No icons uploaded yet."
 msgstr "暂无上传的图标。"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:315
-msgid "No packages found. Please check your installation."
-msgstr "未找到软件包。请检查您的安装。"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:254
-msgid "Not installed"
-msgstr "未安装"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:485
 msgid "Overlay Base"
@@ -457,10 +460,6 @@ msgstr "遮罩基色"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1098
 msgid "PNG Logo (32x32)"
 msgstr "PNG Logo (32x32)"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:431
-msgid "Package Name"
-msgstr "软件包名称"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:470
 msgid "Page Background"
@@ -515,10 +514,6 @@ msgstr "进度条起始"
 msgid "RPC call failed: %s"
 msgstr "RPC 调用失败：%s"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:182
-msgid "Reload"
-msgstr "重新加载"
-
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:900
 msgid "Reset"
 msgstr "重置"
@@ -543,6 +538,14 @@ msgstr "SVG Logo"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:562
 msgid "Sage Green"
 msgstr "鼠尾草绿"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:96
+msgid "Save current settings"
+msgstr "保存当前设置"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:94
+msgid "Save settings"
+msgstr "保存设置"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:492
 msgid "Secondary"
@@ -586,13 +589,26 @@ msgstr ""
 msgid "Settings reset successfully."
 msgstr "设置重置成功。"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:134
+msgid "Size"
+msgstr "大小"
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:564
 msgid "Sky Blue"
 msgstr "天空蓝"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:437
-msgid "Status"
-msgstr "状态"
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:83
+msgid "Specify API key for Unsplash or Wallhaven."
+msgstr "为 Unsplash 或 Wallhaven 指定 API 密钥。"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:87
+msgid ""
+"Specify extra parameters for Wallhaven. etc: "
+"categories=100&purity=100&ratios=16x9&page=1&seed=[a-zA-Z0-9]{6}. <br/>Refer "
+"to Wallhaven API for details: <a %s>Wallhaven API</a>"
+msgstr ""
+"为 Wallhaven 附加请求参数。例如：categories=100&purity=100&ratios=16x9&page=1&seed=[a-zA-Z0-9]{6} <br/>"
+"具体参见：<a %s>Wallhaven API</a>"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:980
 msgid "Structure"
@@ -618,6 +634,10 @@ msgstr "终端背景"
 msgid "Terminal Foreground"
 msgstr "终端前景"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:45
+msgid "Theme configuration"
+msgstr "主题配置"
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:517
 msgid ""
 "The theme layout uses three layers: background (Background) → page container "
@@ -636,10 +656,6 @@ msgstr ""
 msgid "Theme Settings"
 msgstr "主题设置"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:947
-msgid "Theme:"
-msgstr "主题："
-
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:630
 msgid ""
 "This will switch the theme style to the '%s' preset and overwrite the "
@@ -654,55 +670,25 @@ msgstr "工具栏按钮"
 msgid "Tooltip Background"
 msgstr "提示框背景"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:53
+msgid "Unsplash"
+msgstr "Unsplash"
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1176
 msgid "URL cannot be empty"
 msgstr "URL 不能为空"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:219
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:234
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:235
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:255
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:259
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:280
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:285
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:286
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:289
-msgid "Unknown"
-msgstr "未知"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:237
-msgid "Up to date"
-msgstr "已是最新"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:101
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:233
-msgid "Update"
-msgstr "更新"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:75
-msgid "Update Package"
-msgstr "更新软件包"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:166
-msgid ""
-"Update completed successfully! Please reload the page to see the changes. If "
-"the old version still appears, try again in an incognito/private window or "
-"after clearing your browser cache."
-msgstr ""
-"更新成功完成！请重新加载页面以查看更改。如果旧版本仍然显示，请尝试在隐身/隐私"
-"窗口中重试，或清除浏览器缓存后再试。"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:193
-msgid "Update failed: %s"
-msgstr "更新失败：%s"
-
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:108
-msgid "Updating Package"
-msgstr "正在更新软件包"
-
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:642
 msgid "Updating theme..."
 msgstr "正在更新主题..."
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:108
+msgid "Upload background"
+msgstr "上传背景"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:102
+msgid "Upload background (available space: %1024.2mB)"
+msgstr "上传背景（可用空间：%1024.2mB）"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:308
 msgid "Upload Icon"
@@ -723,14 +709,29 @@ msgstr ""
 "括 SVG、PNG、JPG 等。上传的资源存储在 <code>/www/luci-static/aurora/images/</"
 "code> 中，可在整个主题中使用。"
 
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:111
+msgid "Upload..."
+msgstr "上传..."
+
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:353
 msgid "Uploaded Icons"
 msgstr "已上传图标"
 
-#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/version.js:387
-#: applications/luci-app-aurora-config/root/usr/share/luci/menu.d/luci-app-aurora.json:21
-msgid "Version Management"
-msgstr "版本管理"
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:90
+msgid "Use exact resolution"
+msgstr "精确匹配分辨率"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:90
+msgid "Use exact resolution or at least 1080P for Wallhaven."
+msgstr "精确匹配 1080P 分辨率或至少 1080P 分辨率（Wallhaven）。"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:54
+msgid "Wallhaven"
+msgstr "Wallhaven"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:49
+msgid "Wallpaper source"
+msgstr "壁纸来源"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:504
 msgid "Warning"
@@ -739,6 +740,13 @@ msgstr "警告"
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:505
 msgid "Warning Foreground"
 msgstr "警告前景"
+
+#: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:104
+msgid ""
+"You can upload files such as gif/jpg/mp4/png/webm/webp files, to change the "
+"login page background."
+msgstr ""
+"你可以上传 gif/jpg/mp4/png/webm/webp 等格式的文件，以创建自己喜欢的登录界面。"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:1168
 msgid "e.g., System Settings"

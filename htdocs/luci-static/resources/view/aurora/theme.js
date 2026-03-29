@@ -6,39 +6,7 @@
 "require ui";
 "require fs";
 
-const CACHE_KEY = "aurora.version.cache";
-const CACHE_TTL = 1800000;
 const CONFIG_IMPORT_PATH = "/tmp/aurora_config_import.tmp";
-
-const versionCache = {
-  get() {
-    try {
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (!cached) return null;
-      const { timestamp, value } = JSON.parse(cached);
-      if (Date.now() - timestamp > CACHE_TTL) {
-        this.clear();
-        return null;
-      }
-      return value;
-    } catch (e) {
-      return null;
-    }
-  },
-
-  set(value) {
-    try {
-      const data = { timestamp: Date.now(), value };
-      localStorage.setItem(CACHE_KEY, JSON.stringify(data));
-    } catch (e) {
-      console.error("Failed to cache version data:", e);
-    }
-  },
-
-  clear() {
-    localStorage.removeItem(CACHE_KEY);
-  },
-};
 
 document.querySelector("head").appendChild(
   E("script", {
@@ -62,16 +30,6 @@ const callRemoveIcon = rpc.declare({
   object: "luci.aurora",
   method: "remove_icon",
   params: ["filename"],
-});
-
-const callCheckUpdates = rpc.declare({
-  object: "luci.aurora",
-  method: "check_updates",
-});
-
-const callGetInstalledVersions = rpc.declare({
-  object: "luci.aurora",
-  method: "get_installed_versions",
 });
 
 const callGetThemeConfig = rpc.declare({
@@ -454,14 +412,12 @@ return view.extend({
       uci.load("aurora"),
       L.resolveDefault(callGetThemeConfig(), {}),
       L.resolveDefault(callGetThemePresets(), {}),
-      L.resolveDefault(callGetInstalledVersions(), {}),
     ]);
   },
 
   render(loadData) {
     const themeConfig = loadData[1]?.theme || {};
     const themePresets = loadData[2]?.presets || [];
-    const installedVersions = loadData[3];
 
     // Order matches luci-theme-aurora/.dev/src/media/main.css @theme inline
     const baseColorVars = [
@@ -537,11 +493,6 @@ return view.extend({
     ];
 
     const m = new form.Map("aurora", _("Aurora Theme Settings"));
-
-    const themeVersion =
-      installedVersions?.theme?.installed_version || "Unknown";
-    const configVersion =
-      installedVersions?.config?.installed_version || "Unknown";
 
     let so;
     const viewCtx = this;
@@ -939,35 +890,9 @@ return view.extend({
       "div",
       {
         style:
-          "display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content: space-between;",
+          "display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content: flex-end;",
       },
       [
-        E("div", { style: "display: flex; flex-wrap: wrap; gap: 1em;" }, [
-          E("span", { style: "white-space: nowrap;" }, [
-            document.createTextNode(_("Theme: ")),
-            E(
-              "span",
-              {
-                id: "theme-version",
-                class: "label success",
-                style: "cursor: pointer;",
-              },
-              `v${themeVersion}`,
-            ),
-          ]),
-          E("span", { style: "white-space: nowrap;" }, [
-            document.createTextNode(_("Config: ")),
-            E(
-              "span",
-              {
-                id: "config-version",
-                class: "label success",
-                style: "cursor: pointer;",
-              },
-              `v${configVersion}`,
-            ),
-          ]),
-        ]),
         buildPresetToolbarNode(),
       ],
     );

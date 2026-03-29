@@ -43,6 +43,14 @@ main() {
     else
         log "Configuration already exists, skipping initialization"
     fi
+
+    # Ensure global section exists for background settings
+    if ! uci -q get aurora.@global[0] >/dev/null 2>&1; then
+        uci -q add aurora global
+        uci -q set aurora.@global[0].online_wallpaper='bing'
+        uci -q commit aurora
+        log "Added global section for background settings"
+    fi
 }
 
 main

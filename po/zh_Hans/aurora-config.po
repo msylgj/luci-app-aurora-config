@@ -66,8 +66,8 @@ msgstr ""
 "吗？这将把所有内容恢复为默认主题的初始状态。"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:42
-msgid "Aurora theme configuration"
-msgstr "Aurora 主题设置"
+msgid "Aurora background configuration"
+msgstr "Aurora 背景设置"
 
 #: applications/luci-app-aurora-config/root/usr/share/luci/menu.d/luci-app-aurora.json:3
 msgid "Aurora Settings"
@@ -635,8 +635,8 @@ msgid "Terminal Foreground"
 msgstr "终端前景"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/background.js:45
-msgid "Theme configuration"
-msgstr "主题配置"
+msgid "Background configuration"
+msgstr "背景配置"
 
 #: applications/luci-app-aurora-config/htdocs/luci-static/resources/view/aurora/theme.js:517
 msgid ""

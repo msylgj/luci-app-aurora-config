@@ -39,10 +39,10 @@ return view.extend({
 	render(data) {
 		let m, s, o;
 
-		m = new form.Map('aurora', _('Aurora theme configuration'),
+		m = new form.Map('aurora', _('Aurora background configuration'),
 			_('Here you can set the background pictures and videos of the login page of Aurora theme, Chrome is recommended.'));
 
-		s = m.section(form.TypedSection, 'global', _('Theme configuration'));
+		s = m.section(form.TypedSection, 'global', _('Background configuration'));
 		s.addremove = false;
 		s.anonymous = true;
 
@@ -99,7 +99,7 @@ return view.extend({
 			return this.map.save(null, true);
 		}
 
-		s = m.section(form.TypedSection, null, _('Upload background (available space: %1024.2mB)')
+		s = m.section(form.TypedSection, 'global', _('Upload background (available space: %1024.2mB)')
 			.format(data[1].root.avail * 1024),
 			_('You can upload files such as gif/jpg/mp4/png/webm/webp files, to change the login page background.'));
 		s.addremove = false;

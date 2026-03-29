@@ -23,6 +23,32 @@ update_icon_cache_timestamp() {
 	uci -q commit aurora
 }
 
+# Preserve the 'config global' section when replacing the config file with a template.
+# Templates only contain theme/toolbar sections but not the global section (background settings).
+apply_config_preserving_global() {
+	local template_file="$1"
+	local global_backup=""
+
+	# Save current global section if it exists
+	if [ -f "$CONFIG_FILE" ] && grep -q "^config global" "$CONFIG_FILE" 2>/dev/null; then
+		global_backup=$(awk 'BEGIN{p=0} /^config global/{p=1} p && /^config / && !/^config global/{p=0} p' "$CONFIG_FILE")
+	fi
+
+	# Apply template
+	if ! cp "$template_file" "$CONFIG_FILE" 2>/dev/null; then
+		return 1
+	fi
+
+	chmod 644 "$CONFIG_FILE" 2>/dev/null
+
+	# Restore global section if the new file doesn't have one
+	if [ -n "$global_backup" ] && ! grep -q "^config global" "$CONFIG_FILE" 2>/dev/null; then
+		printf '\n%s\n' "$global_backup" >> "$CONFIG_FILE"
+	fi
+
+	return 0
+}
+
 
 case "$1" in
 "list")
@@ -55,10 +81,12 @@ case "$1" in
 	case "$2" in
 	"reset_defaults")
 		if [ -f "$CLASSIC_TEMPLATE" ]; then
-			cp "$CLASSIC_TEMPLATE" "$CONFIG_FILE"
-			chmod 644 "$CONFIG_FILE"
-			update_icon_cache_timestamp
-			echo '{ "result": 0 }'
+			if apply_config_preserving_global "$CLASSIC_TEMPLATE"; then
+				update_icon_cache_timestamp
+				echo '{ "result": 0 }'
+			else
+				echo '{ "result": 1, "error": "Failed to write config file" }'
+			fi
 		else
 			echo '{ "result": 1, "error": "Template file not found" }'
 		fi
@@ -138,14 +166,12 @@ case "$1" in
 			exit 0
 		fi
 
-		if ! cp "$template" "$CONFIG_FILE" 2>/dev/null; then
+		if apply_config_preserving_global "$template"; then
+			update_icon_cache_timestamp
+			echo '{ "result": 0 }'
+		else
 			echo '{ "result": 1, "error": "Failed to write config file" }'
-			exit 0
 		fi
-
-		chmod 644 "$CONFIG_FILE" 2>/dev/null
-		update_icon_cache_timestamp
-		echo '{ "result": 0 }'
 		;;
 
 	"export_config")
